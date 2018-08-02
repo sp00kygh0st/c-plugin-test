@@ -33,6 +33,8 @@ int main() {
     fprintf(stdout, "Calling %s:\r\n", p->pluginName);
     p->on_call(p);
 
+    free(p);
+
     CloseHandle(pluginHandle);
     return EXIT_SUCCESS;
 }
